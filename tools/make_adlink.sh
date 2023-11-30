@@ -7,7 +7,7 @@
 #
 OPATH=$PATH
 OEM_PLATFORM_DIR=$WORKSPACE/adlink-platforms
-OEM_COMMON_DIR=$WORKSPACE/edk2_adlink-ampere-altra
+OEM_COMMON_DIR=$WORKSPACE/edk2_adlink-ampere-altra_CCoE
 . $OEM_COMMON_DIR/tools/edk2.sh
 PATH=$OEM_COMMON_DIR/tools:$PATH
 #
