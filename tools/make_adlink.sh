@@ -49,7 +49,7 @@ else
 fi
 
 if  [ "${DEVEL_MODE}" == "1" ]; then
-    make -f $WORKSPACE/edk2-ampere-tools/Makefile \
+    make -f $WORKSPACE/edk2-ampere-tools_CCoE/Makefile \
         DEVEL_MODE=TRUE \
         OEM_COMMON_DIR=$OEM_COMMON_DIR \
         EDK2_PLATFORMS_PKG_DIR=$EDK2_PLATFORMS_PKG_DIR \
@@ -62,10 +62,10 @@ if  [ "${DEVEL_MODE}" == "1" ]; then
         BOARD_SETTING=$BOARD_SETTING \
         DEBUG=$DEBUG \
         VER=$VER BUILD=$BUILD \
-        CROSS_COMPILE=$WORKSPACE/edk2-ampere-tools/toolchain/ampere/bin/aarch64-ampere-linux-gnu- \
+        CROSS_COMPILE=$WORKSPACE/edk2-ampere-tools_CCoE/toolchain/ampere/bin/aarch64-ampere-linux-gnu- \
         tianocore_img # linuxboot_img # all # tianocore_capsule # 
 else
-    make -f $WORKSPACE/edk2-ampere-tools/Makefile \
+    make -f $WORKSPACE/edk2-ampere-tools_CCoE/Makefile \
         OEM_COMMON_DIR=$OEM_COMMON_DIR \
         EDK2_PLATFORMS_PKG_DIR=$EDK2_PLATFORMS_PKG_DIR \
         BOARD_NAME=$BOARD_NAME \
@@ -77,12 +77,12 @@ else
         BOARD_SETTING=$BOARD_SETTING \
         DEBUG=$DEBUG \
         VER=$VER BUILD=$BUILD \
-        CROSS_COMPILE=$WORKSPACE/edk2-ampere-tools/toolchain/ampere/bin/aarch64-ampere-linux-gnu- \
+        CROSS_COMPILE=$WORKSPACE/edk2-ampere-tools_CCoE/toolchain/ampere/bin/aarch64-ampere-linux-gnu- \
         CHECKSUM_TOOL=$OEM_COMMON_DIR/tools/checksum \
         SPI_SIZE_MB=32 \
         tianocore_capsule
     if [ $? -eq 0 ]; then
-        make -f $WORKSPACE/edk2-ampere-tools/Makefile \
+        make -f $WORKSPACE/edk2-ampere-tools_CCoE/Makefile \
             OEM_COMMON_DIR=$OEM_COMMON_DIR \
             EDK2_PLATFORMS_PKG_DIR=$EDK2_PLATFORMS_PKG_DIR \
             BOARD_NAME=$BOARD_NAME \
