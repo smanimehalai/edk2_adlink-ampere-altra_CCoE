@@ -69,12 +69,12 @@ MmcFirmwareVersion(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[19 * 3 + 5 + 12];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
-
+*/
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
   if (NumberOfBytes == 0)
@@ -122,12 +122,12 @@ IPMI_P3V3_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[72];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
-
+*/
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
   if (NumberOfBytes == 0)
@@ -173,11 +173,12 @@ IPMI_P12V_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+ /*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -224,11 +225,12 @@ IPMI_P5V_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+ /*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -275,11 +277,12 @@ P1V5_VDDH_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -326,11 +329,12 @@ P0V75_PCP_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -377,11 +381,12 @@ P0V9_VDDC_RCA_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -428,11 +433,12 @@ P0V75_VDDC_SOC_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -479,11 +485,12 @@ P1V2_VDDQ_AB_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -530,11 +537,13 @@ P1V2_VDDQ_CD_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
+ 
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -581,11 +590,12 @@ P1V8_PCP_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
@@ -632,11 +642,12 @@ CPU_Temp_Sensor_Reading(
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
-
+/*
   if (GetFirmwareMajorVersion()==0xA1) {
     DEBUG((DEBUG_INFO, "%a A1 is not supported\n", __FUNCTION__));
     return EFI_UNSUPPORTED;
   }
+  */
 
   NumberOfBytes = PL011UartWrite((UINTN)PcdGet64(PcdSerialDbgRegisterBase), IpmiCmdBuf, IpmiCmdBufSize);
 
