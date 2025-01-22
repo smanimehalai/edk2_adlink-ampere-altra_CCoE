@@ -273,7 +273,7 @@ P1V5_VDDH_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 10 2D 05]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 10 2D 04]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -302,13 +302,13 @@ P1V5_VDDH_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 10 2D 05]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 10 2D 04]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 10 2D 05]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 10 2D 04]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -325,7 +325,7 @@ P0V75_PCP_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 14 2D 06]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 14 2D 05]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -354,13 +354,13 @@ P0V75_PCP_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 14 2D 06]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 14 2D 05]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 14 2D 06]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 14 2D 05]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -377,7 +377,7 @@ P0V9_VDDC_RCA_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 18 2D 07]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 18 2D 06]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -406,13 +406,13 @@ P0V9_VDDC_RCA_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 18 2D 07]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 18 2D 06]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 18 2D 07]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 18 2D 06]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -429,7 +429,7 @@ P0V75_VDDC_SOC_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 1C 2D 08]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 1C 2D 07]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -458,13 +458,13 @@ P0V75_VDDC_SOC_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 1C 2D 08]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 1C 2D 07]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 1C 2D 08]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 1C 2D 07]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -481,7 +481,7 @@ P1V2_VDDQ_AB_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 20 2D 09]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 20 2D 08]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -510,13 +510,13 @@ P1V2_VDDQ_AB_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 20 2D 09]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 20 2D 08]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 20 2D 09]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 20 2D 08]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -533,7 +533,7 @@ P1V2_VDDQ_CD_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 24 2D 0A]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 24 2D 09]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -563,13 +563,13 @@ P1V2_VDDQ_CD_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 24 2D 0A]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 24 2D 09]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 24 2D 0A]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 24 2D 09]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -586,7 +586,7 @@ P1V8_PCP_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 28 2D 0B]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 28 2D 0A]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -615,13 +615,13 @@ P1V8_PCP_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 28 2D 0B]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 28 2D 0A]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 28 2D 0B]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 28 2D 0A]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
@@ -638,7 +638,7 @@ CPU_Temp_Sensor_Reading(
     IN UINTN BufferSize)
 {
   UINTN NumberOfBytes;
-  UINT8 IpmiCmdBuf[] = {"[10 2C 2D 0C]\r\n"};
+  UINT8 IpmiCmdBuf[] = {"[10 2C 2D 0B]\r\n"};
   UINTN IpmiCmdBufSize = sizeof(IpmiCmdBuf);
   UINT8 xBuffer[42];
   UINTN xBufferSize = sizeof(xBuffer);
@@ -667,13 +667,13 @@ CPU_Temp_Sensor_Reading(
     return EFI_NO_RESPONSE;
   }
 
-  DEBUG((DEBUG_INFO, "%a [10 2C 2D 0C]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 2C 2D 0B]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%02d:%02x ", i, xBuffer[i]));
   }
   DEBUG((DEBUG_INFO, "\n"));
 
-  DEBUG((DEBUG_INFO, "%a [10 2C 2D 0C]--->", __FUNCTION__));
+  DEBUG((DEBUG_INFO, "%a [10 2C 2D 0B]--->", __FUNCTION__));
   for (int i=0; i< xBufferSize; i++) {
     DEBUG((DEBUG_INFO, "%c", xBuffer[i]));
   }
