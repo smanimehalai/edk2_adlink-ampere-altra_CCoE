@@ -8,6 +8,12 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 
+#define CMD_BUFFER_SIZE           16 
+#define SENSOR_RAW_DATA_OFFSET    33
+#define X_BUFFER_SIZE             42
+#define MAX_STRING_SIZE           64
+#define MMC_RESPONSE_OFFSET       66
+#define MMC_X_BUFFER_SIZE         105   
 /**
   Sends a 32-bit value to a POST card.
 
@@ -43,70 +49,12 @@ MmcFirmwareVersion (
   );
 
 EFI_STATUS
-IPMI_P3V3_Sensor_Reading (
-  IN UINT8 *Buffer,
-  IN UINTN BufferSize
-  );
-
-EFI_STATUS
-IPMI_P12V_Sensor_Reading (
-  IN UINT8 *Buffer,
-  IN UINTN BufferSize
-  );
-
-EFI_STATUS
-IPMI_P5V_Sensor_Reading (
-  IN UINT8 *Buffer,
-  IN UINTN BufferSize
-  );
-
-EFI_STATUS
-P1V5_VDDH_Sensor_Reading (
-  IN UINT8 *Buffer,
-  IN UINTN BufferSize
-  );
-
-EFI_STATUS
-P0V75_PCP_Sensor_Reading (
-  IN UINT8 *Buffer,
-  IN UINTN BufferSize
-  );
-
-EFI_STATUS
-P0V9_VDDC_RCA_Sensor_Reading(
+Get_Sensor_Reading(
     IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
-
-EFI_STATUS
-P0V75_VDDC_SOC_Sensor_Reading(
-    IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
-
-EFI_STATUS
-P1V2_VDDQ_AB_Sensor_Reading(
-    IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
-
-EFI_STATUS
-P1V2_VDDQ_CD_Sensor_Reading(
-    IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
-
-EFI_STATUS
-P1V8_PCP_Sensor_Reading(
-    IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
-
-EFI_STATUS
-CPU_Temp_Sensor_Reading(
-    IN UINT8 *Buffer,
-    IN UINTN BufferSize
-    );
+    IN UINTN BufferSize,
+    IN UINT8 *IpmiCmdBuf,
+    IN UINTN IpmiCmdBufSize
+	);
 
 EFI_STATUS
 WolDisableCmd( 
